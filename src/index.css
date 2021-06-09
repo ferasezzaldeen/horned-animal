@@ -13,9 +13,11 @@ code {
 }
 
 img {
-  width: 500px;
-  height: 500px;
+  width: 50%;
+  height: 50%;
+  margin: auto;
 }
 .web{
   text-align: center;
+
 }

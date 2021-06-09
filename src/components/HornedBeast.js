@@ -15,6 +15,7 @@ class HornedBeast extends React.Component{
             lovePoints: this.state.lovePoints+1
 
         })
+        this.props.OpenModel(this.props.title,this.props.image,this.props.discription);
     }
     render(){
         return(<div>
@@ -23,8 +24,8 @@ class HornedBeast extends React.Component{
             <img src={this.props.image} alt='logo'/>
             <br></br>
             {this.props.title} */}
-            <Card style={{ width: '18rem' }}>
-  <Card.Img src={this.props.image}  onClick={this.increaseNumber} />
+            <Card style={{ width: '18rem',backgroundColor: 'black', height: '35rem', color: 'white' }}>
+  <Card.Img src={this.props.image}  onClick={this.increaseNumber}  />
   <Card.Body>
     <Card.Title>{this.props.title}</Card.Title>
     <Card.Text>
