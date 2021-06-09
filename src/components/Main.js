@@ -11,14 +11,26 @@ class Main extends React.Component {
     render() {
         return (<div>
             <CardGroup>
-                {this.props.Animals.map((index) => {
-                    return (<HornedBeast title={index.title}
-                        image={index.image_url}
-                        discription={index.description}
-                        OpenModel={this.props.OpenModel} 
-                        changeTitle={this.props.changeTitle}
-                        changeImgurl={this.props.changeImgurl}
-                        changeDescription={this.props.changeDescription} />)
+
+                {
+                this.props.Animals.map((index) => {
+                    if(this.props.numberOfHorns===''||this.props.numberOfHorns==='all'){
+                        return (<HornedBeast title={index.title}
+                            image={index.image_url}
+                            discription={index.description}
+                            OpenModel={this.props.OpenModel} 
+                     />)
+
+                    }
+                    if(index.horns==this.props.numberOfHorns){
+                        return (<HornedBeast title={index.title}
+                            image={index.image_url}
+                            discription={index.description}
+                            OpenModel={this.props.OpenModel} 
+                     />)
+
+                    }
+                  
                 })}
             </CardGroup>
 

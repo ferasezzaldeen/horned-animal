@@ -5,6 +5,7 @@ import Main from './components/Main';
 import SelectedBeast from './components/SelectedBeast';
 import Animals from './components/data.json';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Forms from './components/Forms';
 
 
 class App extends React.Component {
@@ -17,18 +18,13 @@ class App extends React.Component {
       title: '',
       imgurl: '',
       description: '',
+      numberOfHorns:'',
 
     }
   }
-  changeTitle = (event) => {
-    this.setState({ titile: event.target.value })
-
-  }
-  changeImgurl = (event) => {
-    this.setState({ title: event.target.value })
-  }
-  changeDescription = (event) => {
-    this.setState({ description: event.target.value })
+  changeNumOfHorns =(event)=>{
+    this.setState({numberOfHorns:event.target.value});
+    console.log(this.state.numberOfHorns)
   }
 
   OpenModel = (first, second, third) => {
@@ -50,12 +46,12 @@ class App extends React.Component {
   render() {
     return (<div className='web'>
       <Header />
+      <Forms changeNumOfHorns={this.changeNumOfHorns} />
       <Main
         Animals={this.state.AnimalsArr}
         OpenModel={this.OpenModel}
-        changeTitle={this.changeTitle}
-        changeImgurl={this.changeImgurl}
-        changeDescription={this.changeDescription} />
+        numberOfHorns={this.state.numberOfHorns}
+      />
       <SelectedBeast
         show={this.state.show}
         CloseModal={this.CloseModal}
@@ -63,7 +59,8 @@ class App extends React.Component {
         title={this.state.title}
         imgurl={this.state.imgurl}
         description={this.state.description}  />
-      <Footer />
+      <Footer
+      />
 
     </div>
     )
