@@ -68,3 +68,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+Number and name of feature: psssing function
+
+Estimate of time needed to complete: 1 day 
+
+Start time: 2pm
+
+Finish time: 2pm
+
+Actual time needed to complete:about 7 hours
